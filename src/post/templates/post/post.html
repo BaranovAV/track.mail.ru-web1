@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{post.title}} - post
+{% endblock %}
+{% block includeCSS %}
+    <link href="{% static 'post/css/style.css' %}" rel="stylesheet">
+{% endblock %}
+{% block includeJS %}
+    <script src="{% static 'post/js/scriptPost.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <h3><a href="{% url 'current_blog' post.source_blog.pk %}">{{ post.source_blog.title }}</a>|<strong>{{ post.title }}</strong></h3>
+    <h4> Создан: {{ post.date.date }}</h4>
+    <pre>{{ post.text }}</pre>
+    <hr>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-1"></div>
+        <div class="col-sm-8 col-xs-12 col-md-8"><h3 style="margin-top: 0px;">Комментарии</h3></div>
+    </div>
+    {% for comment in post.comment_set.all %}
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-2"><pre>{{ comment.author }} написал:</pre></div>
+            <div class="col-sm-8 col-xs-12 col-md-8"><pre>{{ comment.text }}</pre></div>
+            <div class="col-sm-8 col-xs-12 col-md-2"><pre>{{ comment.date|date:"SHORT_DATE_FORMAT" }} {{ comment.date|time:"H:i:s" }}</pre></div>
+        </div>
+    {% endfor %}
+    <hr>
+<div id="addComment" class="row">
+    <form id="commentForm" method="post" action="{% url 'create_comment' post.source_blog.pk post.pk %}">
+        {% csrf_token %}
+        <div class="col-xs-5 col-sm-5 col-md-3"><pre>Оставить комментарий:</pre></div>
+        <textarea class="col-xs-4 col-sm-4 col-md-7" name="text"></textarea>
+        <input class="col-xs-5 col-sm-5 col-md-2" type="submit" id="sendComment" value="Отправить камент">
+    </form>
+</div>
+{% endblock %}

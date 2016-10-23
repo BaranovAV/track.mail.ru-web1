@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Главная страница{% endblock %}
+{% block includeCSS %}
+    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet">
+{% endblock %}
+{% block includeJS %}
+    <script src="{% static 'blog/js/scriptBlogs.js' %}"></script>
+{% endblock %}
+{% block content %}
+<h1>{% block blogtitle %}Блоги{% endblock %}</h1>
+<hr>
+<div>
+    <div class="row">
+        <form method="get" id="create" action="{% url 'blog_create' %} " class="col-xs-3 col-sm-3 col-md-4">
+            <input type="submit" value="Создать новый блог" style="width:70%">
+            <div style="width:29%;display:inline-block;text-align:right">или найти:</div>
+        </form>
+        <form method="get" id="search" action="{% url 'my_blogs' %} " class="col-xs-5 col-sm-5 col-md-8">
+            {% csrf_token %}
+            <input type="search" name="search" value="" style="width:100%">
+        </form>
+    </div>
+</div>
+<div id="blogsBlock">
+    <pre>Блогов на сайте - {{blogSet.count}}{% if blogSet.countFiltered or blogSet.countFiltered == 0 %}; отфильтровано - {{blogSet.countFiltered}}{% endif %}</pre>
+    <div id="blogItems">
+    {% for blog in blogSet.data %}
+        <div class="blog-item">
+            <h3><a href="{% url 'current_blog' blog.pk %}">Блог "{{blog.title}}"</a></h3>
+            <pre>{{blog.text}}</pre>
+            Понравилось: {{blog.likes.count}}<br>
+            Постов в блоге: {{blog.post_set.count}}
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<div>
+    <form>
+
+    </form>
+</div>
+{% endblock %}

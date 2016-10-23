@@ -1,0 +1,86 @@
+
+[2016-10-18 19:30:30 +0000] [5017] [INFO] Starting gunicorn 19.4.5
+[2016-10-18 19:30:30 +0000] [5017] [INFO] Listening at: http://127.0.0.1:8080 (5017)
+[2016-10-18 19:30:30 +0000] [5017] [INFO] Using worker: sync
+[2016-10-18 19:30:30 +0000] [5023] [INFO] Booting worker with pid: 5023
+/home/andy/projects/projectDZ2/src/blog/urls.py:23: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.likeBlogByAjax). Pass the callable instead.
+  url(r'^(?P<blog_pk>[0-9]+)/like/$', 'blog.views.likeBlogByAjax'),
+
+/home/andy/projects/projectDZ2/src/blog/urls.py:28: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.getBlogsByAjax). Pass the callable instead.
+  url(r'^search/$', 'blog.views.getBlogsByAjax'),
+
+/home/andy/projects/projectDZ2/src/application/urls.py:27: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got core.views.show_page). Pass the callable instead.
+  url(r'^$', 'core.views.show_page', name='about'),
+
+Not Found: /favicon.ico
+[2016-10-18 20:22:09 +0000] [5017] [INFO] Handling signal: hup
+[2016-10-18 20:22:09 +0000] [5017] [INFO] Hang up: Master
+[2016-10-18 20:22:09 +0000] [5017] [INFO] Handling signal: term
+[2016-10-18 20:22:09 +0000] [6217] [INFO] Booting worker with pid: 6217
+[2016-10-18 20:22:39 +0000] [5017] [INFO] Shutting down: Master
+[2016-10-18 21:07:46 +0000] [2809] [INFO] Starting gunicorn 19.4.5
+[2016-10-18 21:07:46 +0000] [2809] [INFO] Listening at: http://127.0.0.1:8080 (2809)
+[2016-10-18 21:07:46 +0000] [2809] [INFO] Using worker: sync
+[2016-10-18 21:07:46 +0000] [2815] [INFO] Booting worker with pid: 2815
+/home/andy/projects/projectDZ2/src/blog/urls.py:23: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.likeBlogByAjax). Pass the callable instead.
+  url(r'^(?P<blog_pk>[0-9]+)/like/$', 'blog.views.likeBlogByAjax'),
+
+/home/andy/projects/projectDZ2/src/blog/urls.py:28: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.getBlogsByAjax). Pass the callable instead.
+  url(r'^search/$', 'blog.views.getBlogsByAjax'),
+
+/home/andy/projects/projectDZ2/src/application/urls.py:27: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got core.views.show_page). Pass the callable instead.
+  url(r'^$', 'core.views.show_page', name='about'),
+
+[2016-10-18 18:08:14 +0000] [2815] [INFO] Worker exiting (pid: 2815)
+[2016-10-18 21:08:14 +0000] [2809] [INFO] Handling signal: term
+[2016-10-18 21:08:14 +0000] [2809] [INFO] Shutting down: Master
+[2016-10-18 21:08:17 +0000] [2834] [INFO] Starting gunicorn 19.4.5
+[2016-10-18 21:08:17 +0000] [2834] [INFO] Listening at: http://127.0.0.1:8080 (2834)
+[2016-10-18 21:08:17 +0000] [2834] [INFO] Using worker: sync
+[2016-10-18 21:08:17 +0000] [2840] [INFO] Booting worker with pid: 2840
+/home/andy/projects/projectDZ2/src/blog/urls.py:23: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.likeBlogByAjax). Pass the callable instead.
+  url(r'^(?P<blog_pk>[0-9]+)/like/$', 'blog.views.likeBlogByAjax'),
+
+/home/andy/projects/projectDZ2/src/blog/urls.py:28: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.getBlogsByAjax). Pass the callable instead.
+  url(r'^search/$', 'blog.views.getBlogsByAjax'),
+
+/home/andy/projects/projectDZ2/src/application/urls.py:27: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got core.views.show_page). Pass the callable instead.
+  url(r'^$', 'core.views.show_page', name='about'),
+
+[2016-10-18 18:09:35 +0000] [2840] [INFO] Worker exiting (pid: 2840)
+[2016-10-18 21:09:35 +0000] [2834] [INFO] Handling signal: term
+[2016-10-18 21:09:35 +0000] [2834] [INFO] Shutting down: Master
+[2016-10-18 21:09:37 +0000] [2859] [INFO] Starting gunicorn 19.4.5
+[2016-10-18 21:09:37 +0000] [2859] [INFO] Listening at: http://127.0.0.1:8080 (2859)
+[2016-10-18 21:09:37 +0000] [2859] [INFO] Using worker: sync
+[2016-10-18 21:09:37 +0000] [2865] [INFO] Booting worker with pid: 2865
+/home/andy/projects/projectDZ2/src/blog/urls.py:23: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.likeBlogByAjax). Pass the callable instead.
+  url(r'^(?P<blog_pk>[0-9]+)/like/$', 'blog.views.likeBlogByAjax'),
+
+/home/andy/projects/projectDZ2/src/blog/urls.py:28: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.getBlogsByAjax). Pass the callable instead.
+  url(r'^search/$', 'blog.views.getBlogsByAjax'),
+
+/home/andy/projects/projectDZ2/src/application/urls.py:27: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got core.views.show_page). Pass the callable instead.
+  url(r'^$', 'core.views.show_page', name='about'),
+
+/home/andy/projects/projectDZ2/env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py:112: Warning: Field 'answerTo_id' doesn't have a default value
+  return self.cursor.execute(query, args)
+
+[2016-10-18 22:01:51 +0000] [2859] [INFO] Handling signal: hup
+[2016-10-18 22:01:51 +0000] [2859] [INFO] Hang up: Master
+[2016-10-18 22:01:51 +0000] [2859] [INFO] Handling signal: term
+[2016-10-18 22:01:51 +0000] [3508] [INFO] Booting worker with pid: 3508
+[2016-10-18 22:02:22 +0000] [2859] [INFO] Shutting down: Master
+[2016-10-23 20:48:52 +0000] [4333] [INFO] Starting gunicorn 19.4.5
+[2016-10-23 20:48:52 +0000] [4333] [INFO] Listening at: http://127.0.0.1:8080 (4333)
+[2016-10-23 20:48:52 +0000] [4333] [INFO] Using worker: sync
+[2016-10-23 20:48:52 +0000] [4339] [INFO] Booting worker with pid: 4339
+/home/andy/projects/projectDZ2/src/blog/urls.py:23: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.likeBlogByAjax). Pass the callable instead.
+  url(r'^(?P<blog_pk>[0-9]+)/like/$', 'blog.views.likeBlogByAjax'),
+
+/home/andy/projects/projectDZ2/src/blog/urls.py:28: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got blog.views.getBlogsByAjax). Pass the callable instead.
+  url(r'^search/$', 'blog.views.getBlogsByAjax'),
+
+/home/andy/projects/projectDZ2/src/application/urls.py:27: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got core.views.show_page). Pass the callable instead.
+  url(r'^$', 'core.views.show_page', name='about'),
+

@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{blog.title}} - blog
+{% endblock %}
+{% block includeCSS %}
+    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet">
+{% endblock %}
+{% block includeJS %}
+    <script src="{% static 'blog/js/scriptBlog.js' %}"></script>
+{% endblock %}
+{% block content %}
+    <h3><strong>{{ blog.title }}</strong></h3>
+    <h4> Создан: {{ blog.date.date }}</h4>
+    <h4> Автор: {{ blog.author }}</h4>
+    <h4 style="display: inline-block;">Понравилось:</h4>
+    <button id="like">
+        {% if user.is_authenticated %}
+            {% if me_liked %}
+                <div class="liked"><b>{{blog.likes.count}}</b> Отозвать оценку</div>
+            {% else %}
+                <div class="not-liked">{{blog.likes.count}} Оценить</div>
+            {% endif %}
+        {% endif %}
+    </button>
+    {% csrf_token %}
+    <pre>{{ blog.text }}</pre>
+    {% if request.user == blog.author %}Тут можно легко <a href="{%url 'create_post' blog.pk %}">создать новый пост</a>, это же просто!{%endif%}
+    <hr>
+    Посты:
+    {% for post in blog.post_set.all %}
+        <div>
+            <pre><h5><a href="{% url 'current_post' blog.pk post.pk %}">{{post.title|truncatechars:128}}</a></h5>
+            <pre>{{ post.text|truncatechars:128 }}</pre></pre>
+        </div>
+    {% empty %}
+        отсутствуют
+    {% endfor %}
+{% endblock %}

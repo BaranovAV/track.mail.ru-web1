@@ -1,0 +1,30 @@
+.blog-item {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    margin-bottom: 10px;
+}
+.liked {
+    background-color:rgba(255, 48, 48, 0.8);
+}
+.not-liked {
+    background-color:rgba(72, 230, 72, 0.71);
+}
+#like {
+    padding: 0;
+    margin: 5px;
+    border: 1px solid #989898;
+    border-radius: 15px;
+    vertical-align: bottom;
+}
+#like div{
+    padding:5px;
+    border-radius: 15px;
+}
+#like div b{
+    padding:5px;
+    border-radius: 15px;
+}
+#like:hover {
+    background-color:#989898;
+}

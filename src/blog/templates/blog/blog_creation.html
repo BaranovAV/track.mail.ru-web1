@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Создание нового блога
+{% endblock %}
+
+{% block content %}
+
+<h1>Создать Блог</h1>
+<div id="content-main">
+
+    <form enctype="multipart/form-data" action="" method="post" id="blog_form" novalidate="">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-2"><pre>Заголовок:</pre></div>
+            <div class="col-sm-8 col-xs-12 col-md-8">{{ form.title }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-2"><pre>Сам текст:</pre></div>
+            <div class="col-sm-8 col-xs-12 col-md-8">{{ form.text }}</div>
+        </div>
+        <input type="submit" value="Создать">
+    </form>
+</div>
+{% endblock %}
